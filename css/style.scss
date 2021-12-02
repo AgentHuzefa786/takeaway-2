@@ -1,0 +1,218 @@
+:root {
+  --primary-color: #007af3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  margin: 0em;
+  padding: 0;
+  background: linear-gradient(to right, #00aaff, #00ffc6);
+}
+
+.btn {
+  padding: 0.4em;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: none;
+    margin-bottom: 5em;
+    border-radius: 5em;
+    display: inline-block;
+    padding: 0.8em 2em;
+    width: unset;
+    cursor: pointer;
+    align-items: center;
+
+    &:hover {
+      background: white;
+      color: var(--primary-color);
+    }
+  }
+
+  .btn-secondary {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: none;
+    margin-bottom: 5em;
+    border-radius: 5em;
+    display: inline-block;
+    padding: 0.5em 1em;
+    width: unset;
+    cursor: pointer;
+    align-items: center;
+
+    &:hover {
+      background: white;
+      color: red;
+    }
+  }
+}
+.age-result {
+  padding: 0em;
+  margin-top: 0em;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+
+  .ageResult {
+    padding: 1em;
+    border: 0.2em solid black;
+  }
+}
+
+.challenge-1 {
+  margin: 2em;
+  min-height: 40vh;
+}
+
+.head {
+  margin: 1em;
+  border: black solid 3px;
+  background-color: #f2f2f2;
+
+  h2 {
+    margin: 0.2em;
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+
+.challenge-2 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  margin: 1em;
+}
+
+.challenge-2 > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px white solid;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  .previous {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+  }
+
+  .current {
+    color: white;
+    font-size: 2.5rem;
+  }
+}
+
+.challenge-3 {
+  display: block;
+
+  .output-2 {
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 3.2em;
+    margin-top: 0em;
+    margin-bottom: 1.4em;
+  }
+  .button {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: minmax(50px, auto) repeat(1, 50px);
+    justify-content: space-evenly;
+    align-items: center;
+
+    button {
+      border: none;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      width: 200px;
+      border-radius: 100px;
+    }
+
+    .increment {
+      color: white;
+      background: var(--primary-color);
+      cursor: pointer;
+
+      &:hover {
+        background: white;
+        color: rgb(51, 135, 204);
+      }
+    }
+
+    .reset {
+      color: white;
+      background: red;
+      cursor: pointer;
+
+      &:hover {
+        background: white;
+        color: red;
+      }
+    }
+    .save {
+      color: white;
+      background: darkgreen;
+      cursor: pointer;
+
+      &:hover {
+        background: white;
+        color: darkgreen;
+      }
+    }
+  }
+  .prev-entries {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+}

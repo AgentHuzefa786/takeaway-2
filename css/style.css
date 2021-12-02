@@ -1,0 +1,274 @@
+:root {
+  --primary-color: #007af3;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  margin: 0em;
+  padding: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#00aaff), to(#00ffc6));
+  background: linear-gradient(to right, #00aaff, #00ffc6);
+}
+
+.btn {
+  padding: 0.4em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btn .btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn .btn-primary:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+.btn .btn-secondary {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: 0.5em 1em;
+  width: unset;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn .btn-secondary:hover {
+  background: white;
+  color: red;
+}
+
+.age-result {
+  padding: 0em;
+  margin-top: 0em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.age-result .ageResult {
+  padding: 1em;
+  border: 0.2em solid black;
+}
+
+.challenge-1 {
+  margin: 2em;
+  min-height: 40vh;
+}
+
+.head {
+  margin: 1em;
+  border: black solid 3px;
+  background-color: #f2f2f2;
+}
+
+.head h2 {
+  margin: 0.2em;
+  padding: 0.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+
+.challenge-2 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 100vh;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: minmax(120px, auto) (100px)[5];
+      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  margin: 1em;
+}
+
+.challenge-2 > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px white solid;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+}
+
+.challenge-2 > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.challenge-3 {
+  display: block;
+}
+
+.challenge-3 .output-2 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.challenge-3 h1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.challenge-3 h2 {
+  font-size: 3.2em;
+  margin-top: 0em;
+  margin-bottom: 1.4em;
+}
+
+.challenge-3 .button {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[3];
+      grid-template-columns: repeat(3, 50px);
+  -ms-grid-rows: minmax(50px, auto) (50px)[1];
+      grid-template-rows: minmax(50px, auto) repeat(1, 50px);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.challenge-3 .button button {
+  border: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.challenge-3 .button .increment {
+  color: white;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.challenge-3 .button .increment:hover {
+  background: white;
+  color: #3387cc;
+}
+
+.challenge-3 .button .reset {
+  color: white;
+  background: red;
+  cursor: pointer;
+}
+
+.challenge-3 .button .reset:hover {
+  background: white;
+  color: red;
+}
+
+.challenge-3 .button .save {
+  color: white;
+  background: darkgreen;
+  cursor: pointer;
+}
+
+.challenge-3 .button .save:hover {
+  background: white;
+  color: darkgreen;
+}
+
+.challenge-3 .prev-entries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

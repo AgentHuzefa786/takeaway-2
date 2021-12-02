@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="head">
+      <h2>Challenge-1:Age Converter</h2>
+    </div>
+    <div class="challenge-1">
+      <div class="btn">
+        <button class="btn-primary" onclick="ageConverter()">Click Me</button>
+        <button class="btn-secondary" onclick="reset()">Reset</button>
+      </div>
+
+      <div class="age-result">
+        <div class="ageResult" id="result"></div>
+      </div>
+    </div>
+    <div class="head">
+      <h2>Challenge-2:Calculator</h2>
+    </div>
+    <div class="challenge-2">
+      <div class="output">
+        <div data-previous class="previous"></div>
+        <div data-current class="current"></div>
+      </div>
+      <button data-all-clear class="span-2">AC</button>
+      <button data-delete>DEL</button>
+      <button data-operation>÷</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>*</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equals class="span-2">=</button>
+    </div>
+    <div class="head">
+      <h2>Challenge-3:People Counter</h2>
+    </div>
+    <div class="challenge-3">
+      <div class="output-2">
+        <h1>People Entered</h1>
+        <h2 id="counter">0</h2>
+      </div>
+      <div class="button">
+        <div>
+          <button class="increment" id="btn-increment" onclick="increment()">
+            INCREMENT
+          </button>
+        </div>
+        <div>
+          <button id="btn-reset" class="reset" onclick="reset()">RESET</button>
+        </div>
+        <div>
+          <button class="save" id="btn-save" onclick="save()">SAVE</button>
+        </div>
+      </div>
+      <div id="save-el" class="prev-entries">
+        <p>PREVIOUS ENTRIES:</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
