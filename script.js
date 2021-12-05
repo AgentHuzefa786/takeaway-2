@@ -144,3 +144,98 @@ function save() {
   let countStr = " " + count + " - ";
   document.getElementById("save-el").innerText += countStr;
 }
+
+//challenge-4
+
+let userScore = 0;
+let computerScore = 0;
+let userScoreSpan = document.getElementById("user-score");
+let computerScoreSpan = document.getElementById("computer-score");
+let scoreBoardDiv = document.querySelector(".score-board");
+let resultP = document.querySelector(".result>p");
+let rockDiv = document.getElementById("r");
+let paperDiv = document.getElementById("p");
+let scissorsDiv = document.getElementById("s");
+
+function getComputerChoice() {
+  const choices = ["r", "p", "s"];
+  let randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
+}
+
+function converter(letter) {
+  if (letter === "r") return "Rock";
+  if (letter === "p") return "Paper";
+  if (letter === "s") return "Scissors";
+}
+
+function win(user, computer) {
+  userScore++;
+  userScoreSpan.innerHTML = userScore;
+  computerScoreSpan.innerHTML = computerScore;
+  resultP.innerHTML =
+    "Results: " +
+    converter(user) +
+    " beats " +
+    converter(computer) +
+    ". You Win!";
+}
+
+function lose(user, computer) {
+  computerScore++;
+  userScoreSpan.innerHTML = userScore;
+  computerScoreSpan.innerHTML = computerScore;
+  resultP.innerHTML =
+    "Results: " +
+    converter(computer) +
+    " beats " +
+    converter(user) +
+    ". You Lose!";
+}
+
+function draw(user, computer) {
+  resultP.innerHTML =
+    "Results: " + converter(user) + " and " + converter(computer) + ". Draw!";
+}
+
+function game(userChoice) {
+  const computerChoice = getComputerChoice();
+  switch (userChoice + computerChoice) {
+    case "rs":
+    case "pr":
+    case "sp":
+      win(userChoice, computerChoice);
+      
+      break;
+    case "rr":
+    case "pp":
+    case "ss":
+      draw(userChoice, computerChoice);
+      
+      break;
+    case "sr":
+    case "rp":
+    case "ps":
+      lose(userChoice, computerChoice);
+      
+      break;
+  }
+}
+
+function main() {
+  rockDiv.addEventListener("click", () => {
+    game("r");
+    
+  });
+  paperDiv.addEventListener("click", () => {
+    game("p");
+    
+  });
+  scissorsDiv.addEventListener("click", () => {
+    game("s");
+    
+  });
+}
+
+main();
+
