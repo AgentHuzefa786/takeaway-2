@@ -14,7 +14,7 @@ body {
   padding: 0;
   background: linear-gradient(to right, #00aaff, #00ffc6);
 }
-
+//Challenge-1
 .btn {
   padding: 0.4em;
   justify-content: space-around;
@@ -92,6 +92,7 @@ body {
   }
 }
 
+//Challenge-2
 .challenge-2 {
   display: grid;
   justify-content: center;
@@ -141,6 +142,7 @@ body {
   }
 }
 
+//Challenge-3
 .challenge-3 {
   display: block;
 
@@ -216,3 +218,70 @@ body {
     font-weight: bold;
   }
 }
+
+//Challenge-4
+
+.score-board {
+  border: 3px solid black;
+  width: 200px;
+  margin: 20px auto;
+  color: black;
+  font-size: 46px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-align: center;
+  padding: 15px 20px;
+  font-family: "Courier New", Courier, monospace;
+  position: relative;
+}
+
+.badge {
+  background: #e25840;
+  color: black;
+  font-size: 14px;
+  padding: 2px 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#user-label {
+  position: absolute;
+  top: 30px;
+  left: -25px;
+}
+
+#computer-label {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.result {
+  font-size: 40px;
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
+
+.choices {
+  display: inline-block;
+  margin: 0 20px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.choice {
+  text-align: center;
+  margin: 50px 0;
+}
+
+#action-message {
+  text-align: center;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+}
+
